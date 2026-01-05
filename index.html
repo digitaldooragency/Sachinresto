@@ -1,0 +1,333 @@
+import React, { useState } from 'react';
+import { 
+  Rocket, 
+  Camera, 
+  Target, 
+  CheckCircle2, 
+  Phone,
+  Layout,
+  Zap,
+  Calendar,
+  Clock,
+  ArrowRight,
+  ShieldCheck,
+  Search,
+  BarChart4,
+  MessageSquare,
+  Info,
+  Globe,
+  Share2
+} from 'lucide-react';
+
+const App = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  // Updated Phone Number for Redirect
+  const whatsappNumber = "918600427203"; 
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi, I viewed your proposal and want to discuss the restaurant launch!`;
+
+  const services = [
+    {
+      title: "Omni-Channel SMM",
+      desc: "Management across Instagram, FB, LinkedIn, Twitter, and Google Business.",
+      icon: <Share2 className="w-6 h-6" />
+    },
+    {
+      title: "Google Visibility",
+      desc: "GBP Setup so people find you when they search 'Best food near me'.",
+      icon: <Search className="w-6 h-6" />
+    },
+    {
+      title: "Video Content",
+      desc: "10 High-quality Reels per month with professional shooting and editing.",
+      icon: <Camera className="w-6 h-6" />
+    },
+    {
+      title: "Precision Ads",
+      desc: "Hyper-local Meta & Google Ads targeting people within 2–5km of your door.",
+      icon: <Target className="w-6 h-6" />
+    }
+  ];
+
+  const investmentDetails = [
+    {
+      category: "Content Creation",
+      pricing: "₹18,000",
+      subtext: "Reels + Graphic Posts",
+      features: [
+        "10 Reels (₹1,500/Reel = ₹15,000)",
+        "10 Graphic Posts (₹300/Post = ₹3,000)",
+        "Food Photography & Editing",
+        "Hinglish Caption Writing",
+        "Trending Audio Integration"
+      ],
+      importance: "High-quality visuals for all platforms."
+    },
+    {
+      category: "Social Media (SMM)",
+      pricing: "₹10,000",
+      subtext: "Full Platform Management",
+      features: [
+        "Instagram & Facebook Mgmt",
+        "LinkedIn & Twitter Posting",
+        "Google My Business Profile Mgmt",
+        "Daily Story Updates",
+        "Community & DM Monitoring"
+      ],
+      importance: "Building your local fan base."
+    },
+    {
+      category: "Local SEO & Search",
+      pricing: "₹5,000",
+      subtext: "Google Business Optimization",
+      features: [
+        "Google Maps Ranking",
+        "Keyword Optimization",
+        "Review Management Strategy",
+        "Local Directory Listing"
+      ],
+      importance: "Be the #1 choice on Google."
+    },
+    {
+      category: "Ad Management",
+      pricing: "30% Fee",
+      subtext: "On Total Ad Spend",
+      features: [
+        "Meta & Google Ad Setup",
+        "2-5km Radius Targeting",
+        "A/B Testing Creatives",
+        "Weekly Performance Tuning"
+      ],
+      importance: "Direct traffic to your restaurant.",
+      note: "Ad Spend paid directly by Client. (Recommended Month 2 Budget: ₹5,000)"
+    }
+  ];
+
+  const detailedRoadmap = [
+    {
+      phase: "Phase 1: Foundation (Month 1)",
+      items: [
+        { label: "Identity", task: "Logo & Brand Color Selection" },
+        { label: "Omni-Channel", task: "Setup LinkedIn, Twitter, FB & IG Profiles" },
+        { label: "Google", task: "Business Profile Verification & Map Setup" },
+        { label: "Content", task: "Pre-Launch Shoot (Reels & Static Posts)" }
+      ],
+      focus: "Digital Presence"
+    },
+    {
+      phase: "Phase 2: The Launch (Month 2)",
+      items: [
+        { label: "Campaign", task: "Grand Opening Ads (₹5,000 Initial Spend)" },
+        { label: "Viral", task: "Influencer/Local Foodie Collaborations" },
+        { label: "Ads", task: "30% Management of Meta/Google Budget" },
+        { label: "Reviews", task: "Strategic Google Review Drive" }
+      ],
+      focus: "Driving Footfall"
+    },
+    {
+      phase: "Phase 3: Growth (Month 3)",
+      items: [
+        { label: "Retargeting", task: "Ads for people who engaged/visited" },
+        { label: "Engagement", task: "Interactive Polls & LinkedIn Networking" },
+        { label: "Scale", task: "Boosting high-performing Content" },
+        { label: "Reports", task: "Final Launch ROI & Future Roadmap" }
+      ],
+      focus: "Building Repeat Business"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-slate-900 font-sans pb-20 relative">
+      
+      {/* Floating WhatsApp Button */}
+      <a 
+        href={whatsappLink} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center gap-2 group"
+      >
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-bold text-sm">
+          Chat on WhatsApp
+        </span>
+        <MessageSquare fill="white" size={24} />
+      </a>
+
+      {/* Hero Section */}
+      <header className="bg-slate-900 text-white py-24 px-6 text-center rounded-b-[4rem] shadow-2xl relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1 mb-8 bg-blue-500/10 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase border border-blue-500/20 text-blue-400">
+            <Zap size={14} /> Proposal for Sachin
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
+            Digital Launch <br/>
+            <span className="text-blue-500">Service Summary</span>
+          </h1>
+          <p className="text-lg md:text-xl opacity-70 max-w-2xl mx-auto mb-12">
+            Professional brand building and multi-platform marketing to make your restaurant the #1 talk of Hinganghat.
+          </p>
+        </div>
+      </header>
+
+      {/* Quick Stats */}
+      <section className="py-12 px-6 max-w-6xl mx-auto -mt-16 relative z-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { label: "Platforms", val: "5+" },
+            { label: "Monthly Content", val: "20 Pieces" },
+            { label: "Reach", val: "2-5 KM" },
+            { label: "Focus", val: "Omni-Channel" }
+          ].map((s, i) => (
+            <div key={i} className="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center">
+              <div className="text-2xl font-black text-blue-600">{s.val}</div>
+              <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Investment Summary */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Investment Summary</h2>
+            <p className="text-slate-500 font-medium">Transparent monthly breakdown for your restaurant launch</p>
+          </div>
+
+          <div className="space-y-4">
+            {investmentDetails.map((item, idx) => (
+              <div key={idx} className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div className="md:w-1/3">
+                  <div className="flex justify-between items-start mb-1">
+                    <h3 className="text-xl font-bold text-slate-900">{item.category}</h3>
+                    <span className="text-blue-600 font-bold">{item.pricing}</span>
+                  </div>
+                  <p className="text-xs text-slate-500 mb-2 font-medium">{item.subtext}</p>
+                  <p className="text-[10px] text-blue-500 font-bold uppercase tracking-wider">{item.importance}</p>
+                  {item.note && (
+                    <div className="mt-3 p-3 bg-blue-50 rounded-xl flex gap-2 items-start">
+                      <div className="p-1 bg-blue-100 rounded-full text-blue-600 shrink-0"><Info size={12} /></div>
+                      <p className="text-[10px] text-blue-700 leading-normal">{item.note}</p>
+                    </div>
+                  )}
+                </div>
+                <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-10">
+                  {item.features.map((f, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-slate-600">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                      {f}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Optional Add-on */}
+          <div className="mt-8 bg-white border-2 border-dashed border-blue-200 p-8 rounded-[2rem] flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center">
+                <MessageSquare />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900">WhatsApp Marketing <span className="text-xs text-blue-500 ml-2 font-black tracking-widest uppercase">(Optional)</span></h4>
+                <p className="text-sm text-slate-500">Bulk messaging to local database & customers.</p>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-black text-slate-900">₹4,000</div>
+              <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Additional Charge</p>
+            </div>
+          </div>
+
+          {/* Grand Total */}
+          <div className="mt-12 bg-blue-600 text-white p-10 rounded-[3rem] shadow-xl flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-2">Total Monthly Service Fee</h3>
+              <p className="text-blue-100 text-sm">Combined professional management & creation.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-black mb-1">₹33,000</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-blue-200">Per Month + 30% Ad Fee</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">Launch Strategy Roadmap</h2>
+          <p className="text-slate-500">Step-by-step plan for restaurant success</p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {detailedRoadmap.map((p, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveTab(idx)}
+              className={`px-8 py-3 rounded-2xl font-bold text-sm transition-all shadow-sm ${
+                activeTab === idx ? 'bg-slate-900 text-white scale-105' : 'bg-white text-slate-400 border border-slate-100 hover:bg-slate-50'
+              }`}
+            >
+              Month {idx + 1}
+            </button>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-[3rem] p-10 shadow-2xl border border-slate-50 relative overflow-hidden">
+          <div className="relative z-10">
+            <h4 className="text-2xl font-bold text-blue-600 mb-8 flex items-center gap-3 underline decoration-blue-200 underline-offset-8 decoration-4">
+               {detailedRoadmap[activeTab].phase}
+            </h4>
+            <div className="grid sm:grid-cols-2 gap-8">
+              {detailedRoadmap[activeTab].items.map((item, i) => (
+                <div key={i} className="flex gap-4 group">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-50 group-hover:bg-blue-600 transition-colors flex items-center justify-center text-slate-400 group-hover:text-white shrink-0 font-black text-xs">
+                    0{i+1}
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-black uppercase tracking-tighter text-blue-600 mb-1">{item.label}</div>
+                    <p className="text-lg text-slate-800 font-bold leading-tight">{item.task}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Call to Action */}
+      <section className="py-24 px-6 text-center max-w-4xl mx-auto">
+        <div className="bg-slate-50 rounded-[4rem] p-16 border border-slate-100 shadow-sm">
+          <h2 className="text-4xl font-black text-slate-900 mb-6">Ready to make your <br/><span className="text-blue-600">Grand Opening</span> a success?</h2>
+          <p className="text-lg text-slate-500 mb-12 max-w-xl mx-auto">
+            The strategy is ready. The team is ready. Let's build your brand across all platforms today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-blue-600 text-white px-10 py-5 rounded-[2rem] font-bold text-xl shadow-xl hover:bg-blue-700 hover:-translate-y-1 transition-all"
+            >
+              <MessageSquare size={20} /> Let's Talk Strategy
+            </a>
+          </div>
+          <div className="mt-12 flex justify-center gap-8 text-slate-400 grayscale opacity-60">
+            <div className="flex items-center gap-2"><ShieldCheck size={18}/> Secure Partnership</div>
+            <div className="flex items-center gap-2"><BarChart4 size={18}/> Growth Guaranteed</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-slate-400 py-10">
+        <p className="font-black text-slate-900 mb-1 tracking-tighter text-xl">DIGITAL DOOR AGENCY</p>
+        <p className="text-xs uppercase font-bold tracking-[0.2em]">Hinganghat Launch Partners</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
