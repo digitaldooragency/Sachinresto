@@ -1,150 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Restaurant Launch Proposal</title>
-<style>
-body { margin:0; font-family:sans-serif; color:#0f172a; }
-header { background:#0f172a; color:white; padding:100px 20px; text-align:center; border-bottom-left-radius:4rem; border-bottom-right-radius:4rem; position:relative; overflow:hidden; }
-section { padding:80px 20px; }
-.container { max-width:1100px; margin:auto; }
-.card { background:white; padding:20px; border-radius:2rem; border:1px solid #e2e8f0; box-shadow:0 2px 6px rgba(0,0,0,0.05); margin-bottom:20px; display:flex; flex-wrap:wrap; gap:20px; }
-.cta-btn { background:#2563eb; color:white; padding:15px 30px; border-radius:2rem; font-size:18px; font-weight:bold; text-decoration:none; display:inline-flex; align-items:center; gap:10px; box-shadow:0 4px 10px rgba(37,99,235,0.3); }
-.whatsapp-float { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
-footer { text-align:center; padding:40px 20px; color:#64748b; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Door Agency - Restaurant Launch Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .roadmap-content {
+            display: none;
+        }
+
+        .roadmap-content.active {
+            display: block;
+            animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .whatsapp-float {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+        
+        .phase-btn.active {
+            background-color: #0f172a;
+            color: white;
+            border-color: #0f172a;
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-slate-900">
 
-<a href="https://wa.me/918600427203?text=Hi, I viewed your proposal and want to discuss the restaurant launch!" class="whatsapp-float" target="_blank">WA</a>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918600427203?text=Hi, I viewed your proposal and want to discuss the restaurant launch!" 
+       target="_blank" 
+       class="whatsapp-float fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
-<header>
-<div class="container">
-<div>Proposal for Sachin</div>
-<h1>Digital Launch <br/><span style="color:#2563eb;">Service Summary</span></h1>
-<p>Professional brand building and multi-platform marketing to make your restaurant the #1 talk of Hinganghat.</p>
-</div>
-</header>
+    <!-- Hero Section -->
+    <header class="bg-slate-900 text-white py-24 px-6 text-center rounded-b-[4rem] shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1 mb-8 bg-blue-500/10 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase border border-blue-500/20 text-blue-400">
+                <i class="fas fa-bolt"></i> Proposal for Sachin
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
+                Digital Launch <br/>
+                <span class="text-blue-500">Service Summary</span>
+            </h1>
+            <p class="text-lg md:text-xl opacity-70 max-w-2xl mx-auto mb-12">
+                Professional brand building and multi-platform marketing to make your restaurant the #1 talk of Hinganghat.
+            </p>
+        </div>
+    </header>
 
-<section class="container">
-<div class="card"><div><b>Platforms</b><br/>5+</div><div><b>Monthly Content</b><br/>20 Pieces</div><div><b>Reach</b><br/>2–5 KM</div><div><b>Focus</b><br/>Omni-Channel</div></div>
-</section>
+    <!-- Quick Stats -->
+    <section class="py-12 px-6 max-w-6xl mx-auto -mt-16 relative z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center">
+                <div class="text-2xl font-black text-blue-600">5+</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">Platforms</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center">
+                <div class="text-2xl font-black text-blue-600">20 Pieces</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">Monthly Content</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center">
+                <div class="text-2xl font-black text-blue-600">2-5 KM</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">Local Reach</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center">
+                <div class="text-2xl font-black text-blue-600">Omni-Channel</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">Strategy Focus</div>
+            </div>
+        </div>
+    </section>
 
-<section style="background:#f8fafc;">
-<div class="container">
-<h2 style="text-align:center;">Investment Summary</h2>
+    <!-- Investment Summary -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Investment Summary</h2>
+                <p class="text-slate-500 font-medium">Transparent monthly breakdown for your restaurant launch</p>
+            </div>
 
-<div class="card">
-<div style="flex:1;">
-<h3>Content Creation</h3>
-<p>₹18,000 — Reels + Graphic Posts</p>
-<ul>
-<li>10 Reels (₹1,500/Reel = ₹15,000)</li>
-<li>10 Graphic Posts (₹300/Post = ₹3,000)</li>
-<li>Food Photography & Editing</li>
-<li>Hinglish Caption Writing</li>
-<li>Trending Audio Integration</li>
-</ul>
-<p><small>High-quality visuals for all platforms.</small></p>
-</div>
-</div>
+            <div class="space-y-6">
+                <!-- Content Creation -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                    <div class="md:w-1/3">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-xl font-bold text-slate-900">Content Creation</h3>
+                            <span class="text-blue-600 font-bold">₹18,000</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-2 font-medium">Reels + Graphic Posts</p>
+                        <p class="text-[10px] text-blue-500 font-bold uppercase tracking-wider">High-quality visuals for all platforms.</p>
+                    </div>
+                    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-10">
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> 10 Reels (₹15,000)</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> 10 Graphic Posts (₹3,000)</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Food Photography</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Caption Writing</div>
+                    </div>
+                </div>
 
-<div class="card">
-<div style="flex:1;">
-<h3>Social Media (SMM)</h3>
-<p>₹10,000 — Full Platform Management</p>
-<ul>
-<li>Instagram & Facebook Mgmt</li>
-<li>LinkedIn & Twitter Posting</li>
-<li>Google My Business Profile Mgmt</li>
-<li>Daily Story Updates</li>
-<li>Community & DM Monitoring</li>
-</ul>
-<p><small>Building your local fan base.</small></p>
-</div>
-</div>
+                <!-- SMM -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                    <div class="md:w-1/3">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-xl font-bold text-slate-900">Social Media (SMM)</h3>
+                            <span class="text-blue-600 font-bold">₹10,000</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-2 font-medium">Full Platform Management</p>
+                        <p class="text-[10px] text-blue-500 font-bold uppercase tracking-wider">Building your local fan base.</p>
+                    </div>
+                    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-10">
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> IG & FB Management</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> LinkedIn & Twitter Posting</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Google My Profile</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Daily Story Updates</div>
+                    </div>
+                </div>
 
-<div class="card">
-<div style="flex:1;">
-<h3>Local SEO & Search</h3>
-<p>₹5,000 — Google Business Optimization</p>
-<ul>
-<li>Google Maps Ranking</li>
-<li>Keyword Optimization</li>
-<li>Review Management Strategy</li>
-<li>Local Directory Listing</li>
-</ul>
-<p><small>Be the #1 choice on Google.</small></p>
-</div>
-</div>
+                <!-- Local SEO -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                    <div class="md:w-1/3">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-xl font-bold text-slate-900">Local SEO</h3>
+                            <span class="text-blue-600 font-bold">₹5,000</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-2 font-medium">Search Visibility</p>
+                        <p class="text-[10px] text-blue-500 font-bold uppercase tracking-wider">Be the #1 choice on Google.</p>
+                    </div>
+                    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-10">
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Google Maps Ranking</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Keyword Optimization</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Review Strategy</div>
+                        <div class="flex items-center gap-2 text-sm text-slate-600"><i class="fas fa-circle text-[6px] text-blue-400"></i> Local Listings</div>
+                    </div>
+                </div>
+            </div>
 
-<div class="card">
-<div style="flex:1;">
-<h3>Ad Management</h3>
-<p>30% Fee — On Total Ad Spend</p>
-<ul>
-<li>Meta & Google Ad Setup</li>
-<li>2–5km Radius Targeting</li>
-<li>A/B Testing Creatives</li>
-<li>Weekly Performance Tuning</li>
-</ul>
-<p><small>Direct traffic to your restaurant.</small></p>
-<p><small>Ad Spend paid directly by Client. (Recommended Month 2 Budget: ₹5,000)</small></p>
-</div>
-</div>
+            <!-- Grand Total -->
+            <div class="mt-12 bg-blue-600 text-white p-10 rounded-[3rem] shadow-xl flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Total Monthly Service Fee</h3>
+                    <p class="text-blue-100 text-sm">Combined professional management & creation.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black mb-1">₹33,000</div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-blue-200">Per Month + 30% Ad Fee</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card" style="border:2px dashed #93c5fd; justify-content:space-between; align-items:center;">
-<div><h3>WhatsApp Marketing (Optional)</h3><p>Bulk messaging to local database & customers.</p></div>
-<div><h2>₹4,000</h2><small>Additional Charge</small></div>
-</div>
+    <!-- Roadmap Section -->
+    <section class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Launch Strategy Roadmap</h2>
+            <p class="text-slate-500 mb-8">Detailed month-by-month execution plan</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="showPhase(0)" class="phase-btn active px-8 py-3 rounded-2xl font-bold text-sm transition-all border border-slate-100">Month 1: Foundation</button>
+                <button onclick="showPhase(1)" class="phase-btn px-8 py-3 rounded-2xl font-bold text-sm transition-all bg-white text-slate-400 border border-slate-100">Month 2: Execution</button>
+                <button onclick="showPhase(2)" class="phase-btn px-8 py-3 rounded-2xl font-bold text-sm transition-all bg-white text-slate-400 border border-slate-100">Month 3: Scaling</button>
+            </div>
+        </div>
 
-<div style="background:#2563eb; color:white; padding:40px; border-radius:3rem; text-align:center;">
-<h2>₹33,000</h2>
-<p>Per Month + 30% Ad Fee</p>
-</div>
-</div>
-</section>
+        <div id="phase-container" class="bg-white rounded-[3rem] p-12 shadow-2xl border border-slate-50 relative overflow-hidden">
+            <!-- Phase 1 Content -->
+            <div id="phase-0" class="roadmap-content active">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-extrabold text-slate-900">Setting the Stage</h4>
+                        <p class="text-slate-500 font-medium">Establishing brand identity and digital infrastructure.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-blue-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Strategy</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Brand Identity Guardrails</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Defining Logo placement, brand colors (Visual Identity), and restaurant voice for social media consistency.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-purple-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Technical</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Digital Infrastructure</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Omni-channel profile setup (IG, FB, LinkedIn, Twitter). Google Business Profile verification and SEO keyword mapping.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-green-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Creative</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">The "Teaser" Shoot</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Initial food photography and "Coming Soon" video content creation. Setting up high-engagement templates for stories.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-orange-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Growth</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Audience Warming</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Inviting local community to pages. Strategic posting on local Hinganghat groups to build early anticipation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 2 Content -->
+            <div id="phase-1" class="roadmap-content">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-extrabold text-slate-900">Hyper-Local Domination</h4>
+                        <p class="text-slate-500 font-medium">Driving mass awareness and physical footfall.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Ads</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Grand Opening Campaign</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Launching Meta & Google ads within a 5km radius. Promoting "Opening Offers" and high-quality Reels to local foodies.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-yellow-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Network</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Influencer Collabs</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Inviting local Hinganghat food bloggers for reviews. Cross-promoting their reels on restaurant's official profiles.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-blue-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">SEO</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Local Search Conquest</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Review generation strategy at the table. Ensuring "Best Food in Hinganghat" queries lead directly to your door.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-teal-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Content</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">High-Volume Posting</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">10 Reels + 10 Graphic posts per month. Daily active stories highlighting customer experience and menu items.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<section class="container">
-<h2 style="text-align:center;">Launch Strategy Roadmap</h2>
+            <!-- Phase 3 Content -->
+            <div id="phase-2" class="roadmap-content">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-extrabold text-slate-900">Retention & Expansion</h4>
+                        <p class="text-slate-500 font-medium">Building a loyal customer base for long-term ROI.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-indigo-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Data</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Customer Retargeting</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Ads targeting people who visited or engaged previously. Loyalty reminders and "New Dish" alerts.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-blue-400 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">B2B</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">LinkedIn Networking</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Targeting corporate professionals for office lunch catering and party bookings via LinkedIn & Twitter.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Analytics</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Launch ROI Audit</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Detailed analysis of ad spend vs footfall. Scaling high-performing content formats for next quarter.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                            <span class="px-3 py-1 bg-rose-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">System</span>
+                            <h5 class="font-bold text-lg mt-3 mb-2 text-slate-900">Automation Mode</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">Standardizing monthly content calendar. Implementing bulk scheduling for all 5+ social platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3>Phase 1: Foundation (Month 1)</h3>
-<div class="card">
-<div>01 <b>Identity</b><br/>Logo & Brand Color Selection</div>
-<div>02 <b>Omni-Channel</b><br/>Setup LinkedIn, Twitter, FB & IG Profiles</div>
-<div>03 <b>Google</b><br/>Business Profile Verification & Map Setup</div>
-<div>04 <b>Content</b><br/>Pre-Launch Shoot (Reels & Static Posts)</div>
-</div>
+    <!-- Final CTA -->
+    <section class="py-24 px-6 text-center max-w-4xl mx-auto">
+        <div class="bg-slate-900 text-white rounded-[4rem] p-16 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <h2 class="text-4xl font-black mb-6 relative z-10">Ready to dominate Hinganghat?</h2>
+            <p class="text-lg opacity-70 mb-12 max-w-xl mx-auto relative z-10">
+                Build your brand across all platforms and start driving traffic to your door. The strategy is ready. Let's launch.
+            </p>
+            <a href="https://wa.me/918600427203?text=Hi, let's start the digital strategy for my restaurant!" 
+               class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-[2rem] font-bold text-xl transition-all relative z-10 shadow-lg">
+                <i class="fab fa-whatsapp"></i> Let's Talk Strategy
+            </a>
+        </div>
+    </section>
 
-<h3>Phase 2: The Launch (Month 2)</h3>
-<div class="card">
-<div>01 <b>Campaign</b><br/>Grand Opening Ads (₹5,000 Initial Spend)</div>
-<div>02 <b>Viral</b><br/>Influencer/Local Foodie Collaborations</div>
-<div>03 <b>Ads</b><br/>30% Management of Meta/Google Budget</div>
-<div>04 <b>Reviews</b><br/>Strategic Google Review Drive</div>
-</div>
+    <!-- Footer -->
+    <footer class="text-center text-slate-400 py-10 border-t border-slate-100 mt-20">
+        <p class="font-black text-slate-900 mb-1 tracking-tighter text-xl uppercase">Digital Door Agency</p>
+        <p class="text-xs uppercase font-bold tracking-[0.2em]">Hinganghat Launch Partners</p>
+    </footer>
 
-<h3>Phase 3: Growth (Month 3)</h3>
-<div class="card">
-<div>01 <b>Retargeting</b><br/>Ads for people who engaged/visited</div>
-<div>02 <b>Engagement</b><br/>Interactive Polls & LinkedIn Networking</div>
-<div>03 <b>Scale</b><br/>Boosting high-performing Content</div>
-<div>04 <b>Reports</b><br/>Final Launch ROI & Future Roadmap</div>
-</div>
-</section>
+    <script>
+        function showPhase(index) {
+            // Update buttons
+            const btns = document.querySelectorAll('.phase-btn');
+            btns.forEach((btn, i) => {
+                if (i === index) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
 
-<section style="text-align:center;">
-<h2>Ready to make your <span style="color:#2563eb;">Grand Opening</span> a success?</h2>
-<p>The strategy is ready. The team is ready. Let’s build your brand across all platforms today.</p>
-<a href="https://wa.me/918600427203?text=Let’s discuss strategy!" class="cta-btn" target="_blank">Let’s Talk Strategy</a>
-<p style="margin-top:20px;"><small>Secure Partnership • Growth Guaranteed</small></p>
-</section>
-
-<footer>
-<p><b>DIGITAL DOOR AGENCY</b></p>
-<p>Hinganghat Launch Partners</p>
-</footer>
-
+            // Update content
+            const contents = document.querySelectorAll('.roadmap-content');
+            contents.forEach((content, i) => {
+                if (i === index) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
